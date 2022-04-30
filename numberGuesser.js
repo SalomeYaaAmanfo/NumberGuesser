@@ -9,10 +9,10 @@ function generateTarget(){
 }
 function compareGuesses(userGuess,computerGuess,secretTarget){
   
-  if( userGuess == computerGuess){
+  if( userGuess === computerGuess){
         return true;
   }
-  if(userGuess != computerGuess){
+  if(userGuess !== computerGuess){
     userGuess = Math.abs(userGuess - secretTarget)
     computerGuess = Math.abs(computerGuess - secretTarget)
   if(userGuess < computerGuess){
@@ -24,7 +24,6 @@ function compareGuesses(userGuess,computerGuess,secretTarget){
  }
 }
 
-let winner = '';
 function updateScore(winner){
   switch(winner){
     case 'human':
